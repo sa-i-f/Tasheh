@@ -1,0 +1,115 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+<header id="about_head" class="text-light">
+    <div class="dark-overlay">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 pt-5 m-auto text-center">
+          <h1>Contact Us</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, cum!</p>
+        </div>
+      </div>
+    </div>
+    </div>
+  </header>
+  <section class="p-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+           <div class="card">
+             <div class="card-body p-md-5">
+               <h3>Get in Touch</h3>
+               <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, saepe.</p>
+               <h3>Address</h3>
+               <p>550 main Boston st boston</p>
+               <h3>Email</h3>
+               <p>TashehOfficial@gmail.com</p>
+               <h3>Phone</h3>
+               <p>(555)555-5555</p>
+             </div>
+           </div>
+        </div>
+        <div class="col-md-8">
+          <div class="card mt-4 mt-md-0">
+            <div class="card-body p-md-5">
+              <h3 class="text-center">Please fill out this form to contact us</h3>
+              <hr>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="First Name">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Last Name">
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="form-group">
+                    <input type="email" class="form-control" placeholder="Email">
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="form-group">
+                    <input type="number" class="form-control" placeholder="Phone Number">
+                  </div>
+                </div>
+              
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                 <div class="form-group">
+                   <textarea class="form-control" placeholder="Type Your message"></textarea>
+                 </div>
+                </div>
+                <div class="col-md-12">
+                 <div class="form-group">
+                   <a href="" class="btn btn-outline-danger btn-block">Send</a>
+                 </div>
+                </div>
+              </div>
+            </div>
+          </div>
+       </div>
+      </div>
+    </div>
+  </section>
+  <section class="py-4 bg-dark text-white text-center">
+  <div class="container">
+    <h3>Our Staff</h3>
+    <hr>
+    <div class="row justify-content-center">
+      <div class="col-md-2 col-6 mb-3">
+        <img src="{%static 'imgs/saif.png'%}" class="img-fluid rounded-circle mb-2" alt="">
+        <h4>Saif abu-lebdah</h4>
+        <small>Designer Team</small>
+      </div>
+      <div class="col-md-2 col-6">
+        <img src="{%static 'imgs/khalid.png'%}" class="img-fluid rounded-circle mb-2" alt="">
+        <h4>Khalid <br> Tartir</h4>
+        <small>Project Manager Assistant</small>
+      </div>
+      <div class="col-md-2 col-6 mb-2">
+        <img src="{%static 'imgs/rashed.png'%}" class="img-fluid rounded-circle mb-2" alt="">
+        <h4>Rashed Al-Qatarneh</h4>
+        <small>Project Manager</small>
+      </div>
+      <div class="col-md-2 col-6">
+        <img src="{%static 'imgs/abd.png'%}" class="img-fluid rounded-circle mb-2" alt="">
+        <h4>Abdelaziz Alhusni</h4>
+        <small>Security Engineer</small>
+      </div>
+      <div class="col-md-2 col-6">
+        <img src="{%static 'imgs/yahya.jpg'%}" class="img-fluid rounded-circle mb-2" alt="">
+        <h4>Yahya Abd Al-jawad</h4>
+        <small>Web Developer</small>
+      </div>
+    </div>
+  </div>
+  </section>
+
+{% endblock content %}
+

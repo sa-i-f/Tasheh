@@ -1,0 +1,113 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planner</title>
+    <link rel="stylesheet" href="{%static 'css/bootstrap.css'%}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="{%static 'css/myCSS.css'%}">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css" integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ==" crossorigin="" />
+    <link rel="stylesheet" href="{%static 'css/map.css'%}">
+
+</head>
+<body>
+  <nav class="navbar navbar-expand-sm navbar-dark bg-main">
+    <div class="container">
+        <h3 class="d-inline align-middle text-light">Hello, {{name}}</h3>
+      <div  id="navc">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+           <a href="{%url 'logout'%}" class="nav-link">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+</nav>
+<header class="text-dark">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 m-auto pt-5 text-center">
+        <h2>Start Planning Your Journey Today !</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, cum!</p>
+      </div>
+    </div>
+  </div>
+  </div>
+</header>
+
+<section id="sec" class="pt-lg-3 overflow-hidden">
+         <div class="row justify-content-lg-center ">
+            <div class="col-md-4 bg-dark summary">
+                  <div class="d-flex flex-column p-3 ">
+                      <img src="{%static 'imgs/TashehR.png'%}" class="img-fluid align-self-center " alt="logo" style="width: 32%">
+                      <div class="ww text-light pt-4  " >
+                          <form action="" class="container hidden frm">
+                          <div action="" class="row">
+                              <div class="col-md-6 form-group d-flex align-items-center">
+                                  <label for="" class="label">Type</label>
+                                  <select name="" id="" class="form-control input inp_ty">
+                                      <option value="running">Running</option>
+                                      <option value="cycling">Cycling </option>
+                                  </select>
+                              </div>
+                              <div class="col-md-6 form-group d-flex align-items-center">
+                                  <label for="" class="label">Distance</label>
+                                  <input type="text" class="form-control input inp_dis" placeholder="km">
+                              </div>
+                              <div class="col-md-6 form-group d-flex align-items-center">
+                                  <label for="" class="label">Duration</label>
+                                  <input type="text" class="form-control input inp_dur" placeholder="min">
+                              </div>
+                              <div class="col-md-6 form-group d-flex align-items-center inp_cad_r" >
+                                  <label class="label" for=""> Cadence</label>
+                                 <input type="text" class="form-control input inp_cad" placeholder="step/min">
+                              </div>
+
+                              <div class="col-md-6 form-group d-flex align-items-center hidden_row inp_el_r">
+                                  <label class="label" for="">Elev Gain</label>
+                                 <input type="text" class="form-control input inp_el" placeholder="meters">
+                              </div>
+                          </div>
+                            <input type="submit" class="btn btn-success b">
+                            
+                      </form>
+                      <div class="workouts">
+                          <!--JS code-->
+                      </div>
+                      </div>
+                  </div>
+                  <button class="btn btn-block bg-light m-2" onclick="app.reset()">Reset</button>
+            </div>
+            <div class="col-md-8" id="map"> 
+               
+            </div>
+          </div>
+</section>
+
+<footer id="ftr" class=" text-center p-4">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        Software engineering &copy;<span id="year"></span>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+<script src="{%static 'js/bootstrap.js'%}"></script>
+<script src="{%static 'js/jquery-3.6.0.min.js'%}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+<script src="{%static 'js/jquery-3.6.0.js'%}"></script>
+<script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js" integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ==" crossorigin=""></script>
+<script src="{%static 'js/script.js'%}"></script>
+<script>
+      $("#year").text(new Date().getFullYear())
+</script>
+
+</html>

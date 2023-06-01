@@ -1,0 +1,143 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<section id="sec1">
+    <div id="mySlide" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <!--JavaScript generator-->
+
+       <!-- <li class="active" data-target="#mySlide" data-slide-to="0"></li>
+        <li class="" data-target="#mySlide" data-slide-to="1"></li>
+        <li class="" data-target="#mySlide" data-slide-to="2"></li>-->
+
+      </ol>
+      <div class="carousel-inner">
+          <div class="carousel-item active slide-img-1">
+            <div class="container ">
+              <div class="carousel-caption d-sm-block text-md-right mb-5 text-dark">
+                <h4 class="display-3">Travel Now</h4>
+                <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, illo?</p>
+                <a href="{% url 'signup' %}" class="btn btn-lg btn-danger">Sign Up Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item slide-img-2">
+            <div class="container">
+              <div class="carousel-caption d-sm-block text-center mb-5">
+                <h4 class="display-3">Its Time To Explore The World</h4>
+                <p class="lead"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus amet, numquam aliquam nulla eaque facere totam consectetur officiis est exercitationem? </p>
+                <a href="#" class="btn btn-lg btn-primary">Learn More</a>
+              </div>
+            </div>
+          </div>
+        <div class="carousel-item slide-img-3">
+          <div class="container">
+            <div class="carousel-caption d-sm-block text-left text-dark mb-5">
+              <h4 class="display-3">Discover New Places</h4>
+              <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, illo?</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="#mySlide" data-slide="prev" class="carousel-control-prev">
+        <span class="carousel-control-prev-icon"></span>
+      </a>
+      <a href="#mySlide" data-slide="next" class="carousel-control-next">
+        <span class="carousel-control-next-icon"></span>
+      </a>
+    </div>
+  </section>
+
+<section id="sec2" class="py-5">
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 mb-4 text-center">
+      <i class="fas fa-plane fa-3x mb-2 "></i>
+      <h3>Find Flights</h3>
+      <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+    <div class="col-md-4 mb-4 text-center">
+      <i class="fas fa-lock fa-3x mb-2"></i>
+      <h3>Secure Data</h3>
+      <p>Lorem ipsum dolor sit amet Lorem, ipsum.</p>
+    </div>
+    <div class="col-md-4 mb-4 text-center">
+      <i class="fas fa-coins fa-3x mb-2"></i>
+      <h3>Best Prices</h3>
+      <p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet.</p>
+    </div>
+  </div>
+</div>
+</section>
+<section id="sec3" class="p-5 mb-3">
+  <div class="dark-overlay">
+        <div class="container pt-5">
+          <h3>Are You Ready To Get Started</h3>
+          <p class="d-md-block">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut in perferendis corporis at corrupti ad minus sint voluptate! Eum, similique?</p>
+        </div>
+  </div>
+</section>
+<section id="sec4" class="py-3">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 align-self-center">
+        <h3>Why Tasheh?</h3>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem officiis non, iste beatae fuga cumque dolor repellat reprehenderit dolores corporis!</p>
+        <a href="#" class="btn btn-outline-danger btn-lg">Learn More</a>
+      </div>
+      <div class="col-md-6 align-self-center">
+        {% load static %}
+        <img src="{%static 'imgs/laptop.png'%}" alt="" class="img-fluid d-none d-md-block">
+      </div>
+    </div>
+  </div>
+</section>
+<section class="mt-3" id="sec5">
+  <div class="dark-overlay">
+        <div class="container p-5">
+          <a href="#" class="video" data-video="https://www.youtube.com/embed/dQw4w9WgXcQ" data-toggle="modal" data-target="#videoModal">
+            <i class="fas fa-play fa-3x"></i>
+          </a>
+          <h1>See What We Can Do</h1>
+    </div>
+  </div>
+</section>
+<div id="videoModal" class="fade modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button class="close" data-dismiss="modal">
+          <span>&times;</span>
+        </button>
+        <iframe src="" frameborder="0" height="350" width="100%" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+<section id="sec6" class="py-5">
+  <div class="container">
+    <div class="text-center">
+      <h1>Photo Gallary</h1>
+      <p class="lead">check out our photos</p>
+    </div>
+    <div class="row mb-4 imgs">
+    <!--javascript-->
+    </div>
+  </div>
+</section>
+<section class="bg-main text-white text-center p-5">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h1>Sign Up for Our New Plans</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet omnis in quasi ipsam optio vitae corporis sunt dignissimos nesciunt at.</p>
+        <form class="form-inline justify-content-center">
+          <input type="text" class="form-control mr-2 mb-2" placeholder="Enter Name">
+          <input type="email" class="form-control mr-2 mb-2" placeholder="Enter Email">
+          <button class="btn btn-primary">submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock content %}
